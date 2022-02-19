@@ -37,8 +37,7 @@ class Usuario {
 
     //getFullName(): String. Retorna el completo del usuario. Utilizar template strings.
     getFullName() {
-        return 
-            `${this.nombre} ${this.apellido}` 
+        return `${this.nombre} ${this.apellido}`;
     }
 
     //addMascota(String): void. Recibe un nombre de mascota y lo agrega al array de mascotas.
@@ -68,10 +67,10 @@ class Usuario {
 const usuario1 = new Usuario('Pablo', 'Aguila', [], []);
 
 console.log(usuario1);
-//console.log(usuario.libros);
+//console.log(usuario1.libros);
 
 //usuario1.getFullName();
-usuario1.getFullName();
+//usuario1.getFullName();
 
 usuario1.addMascota('perro');
 usuario1.addMascota('gato');
@@ -84,15 +83,20 @@ usuario1.addBook('La divina comedia', 'Dante');
 
 usuario1.getBookNames();
 
+
+
 // node AguilaPablo\AguilaPablo.js
 
-console.log(usuario1.countMascotas);
+console.log(usuario1.countMascotas());
 console.log(usuario1.getBookNames());
 
 const verUsuario = () => {
     return console.log(`El usuario ${usuario1.getFullName()} tiene ${usuario1.countMascotas()} tipos de mascotas y tiene los siguientes libros: ${usuario1.getBookNames()} `)
-
 }
 
 console.log(verUsuario())
+console.log(usuario1.libros)
+console.log(usuario1.mascotas)
+console.log(usuario1.getFullName())
+
 
