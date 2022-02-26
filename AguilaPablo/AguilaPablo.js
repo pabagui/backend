@@ -83,9 +83,7 @@ class Contenedor {
     constructor (file) {
         this.file = file;
     }
-
-
-    
+ 
     //save(Object): Number - Recibe un objeto, lo guarda en el archivo, devuelve el id asignado.
   async save(product) {
         try {
@@ -161,7 +159,7 @@ class Contenedor {
     //deleteById(Number): void - Elimina del archivo el objeto con el id buscado.
     async deleteById(Number) {
         try {
-            products = await fs.readFile(this.filePath, 'utf-8', (error, content) => {
+            products = await fs.readFile(this.file, 'utf-8', (error, content) => {
                 if(error) {
                     console.log('No hay productos para borrar')
                 } else {
@@ -174,7 +172,7 @@ class Contenedor {
                         console.log(`índice ${i}`);
                         products.splice(i, 1);
                         this.addProducts(products);
-                        console.log(`producto ${Number}`);
+                        console.log(`producto eliminado : ${Number}`);
                     }                  
                 }
             });
@@ -206,6 +204,7 @@ class Contenedor {
 const programa = async() => {
     const  mochilas = new Contenedor('AguilaPablo/productos.json');
 
+
     const mochila1 = {
         title: 'Cavancha',
         price: 55000, 
@@ -227,17 +226,25 @@ const programa = async() => {
     }
     await mochilas.save(mochila3);
 
-    await console.log(mochilas.getAll());
+    console.log(await mochilas.getAll());
+    //await console.log(mochilas.getAll());
     //const prods = await mochilas.getAll();
     //console.log('array de productos: ' + JSON.stringify(prods));
   
-    await console.log(mochilas.getById(3));
+    console.log(await mochilas.getById(3));
+    //await console.log(mochilas.getById(3))
     //const prod = await mochilas.getById(3);
     //console.log('producto filtrado: ' + JSON.stringify(prod));
 
-    await mochilas.deleteById(9);
-    await console.log(mochilas.getAll());
+    await mochilas.deleteById(3); 
+    console.log(await mochilas.getAll());
+    //await console.log(mochilas.getAll());
 
+
+    
+    await mochilas.deleteAll();
+    //console.log(await mochilas.getAll());
+    
 }
 
 programa();
@@ -253,32 +260,5 @@ console.log(contenedor1);
 contenedor1.save();
 */
 
-/*
-const usuario1 = new Usuario('Pablo', 'Aguila', [], []);
 
-console.log(usuario1);
-
-usuario1.addMascota('perro');
-usuario1.addMascota('gato');
-usuario1.addMascota('pez');
-
-usuario1.countMascotas();
-
-usuario1.addBook('Salambó', 'Gustave Flaubert');
-usuario1.addBook('La divina comedia', 'Dante');
-
-usuario1.getBookNames();
-
-console.log(usuario1.countMascotas());
-console.log(usuario1.getBookNames());
-
-const verUsuario = () => {
-    return console.log(`El usuario ${usuario1.getFullName()} tiene ${usuario1.countMascotas()} tipos de mascotas y tiene los siguientes libros: ${usuario1.getBookNames()} `)
-}
-
-console.log(verUsuario())
-console.log(usuario1.libros)
-console.log(usuario1.mascotas)
-console.log(usuario1.getFullName())
-*/
 
