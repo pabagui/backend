@@ -1,0 +1,30 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "description": "primer proyecto de back end",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "http": "nodemon --inspect serverHttp.js",
+    "express": "nodemon --inspect serverExpress.js",
+    "node": "node src/index.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabagui/backend.git"
+  },
+  "author": "Pablo Aguila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pabagui/backend/issues"
+  },
+  "homepage": "https://github.com/pabagui/backend#readme",
+  "devDependencies": {
+    "eslint": "^8.10.0"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.1"
+  }
+}

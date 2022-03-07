@@ -1,0 +1,8 @@
+#ignora carpetas node_modules
+node_modules
+
+# Ignora archivos dependencia VSC
+.vscode
+
+# Ignora archivos dependencia VSC
+.eslintrc.json
