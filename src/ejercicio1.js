@@ -43,7 +43,7 @@ app.get('/api/palabras/:num', (req, res) => {
 })
 
 
-const server = app.listen(8080, () => {
+const server = app.listen(8086, () => {
     console.log('😃 Server started on http://localhost:8080')
 });
 server.on('error', (err) => console.log(err));

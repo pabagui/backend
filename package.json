@@ -10,6 +10,7 @@
     "server3": "nodemon --inspect ./src/server3.js",
     "server4": "nodemon --inspect ./src/server4.js",
     "server5": "nodemon --inspect ./src/server5.js",
+    "server": "nodemon --inspect ./desafio4/src/server.js",
     "ejercicio1": "nodemon --inspect ./src/ejercicio1.js",
     "ejercicio2": "nodemon --inspect ./src/ejercicio2.js",
     "ejercicio3": "nodemon --inspect ./src/ejercicio3.js",
