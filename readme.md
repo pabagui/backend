@@ -1,15 +1,23 @@
-# Tienda virtual K'epe Bags
+# Desafío 5: motores de plantillas
 
-Este proyecto consiste en un ecommerce de bolsos y accesorios paras bicicleta realizado con React JS y Bootstrap 5.0 para los estilos.
+en primer lugar prefiero ejs porque tiene una configuración más sencilla
+en segundo pug  y en tercero handlebars
 
 Librerías y/o frameworks utilizados:
-    "firebase": "^9.6.7" reemplaza a una base de datos para la app
-    "react": "^17.0.2" uso de javascript mediante componentes
-    "react-bootstrap": "^2.1.2" estilos de Bootstrap para React
-    "react-router-dom": "^6.2.2" enrutado de componentes en la app
+"express": "^4.17.3",
+"express-handlebars": "^6.0.3",
+"pug": "^3.0.2"
+"ejs": "^3.1.6"
+       
+Scripts:
+"hbl": "nodemon --inspect ./src/server.js",
+"pug": "nodemon --inspect ./src/server.js",
 
-El objetivo es crear una aplicación que permite navegar por un catálogo de productos, cargarlos en un carro de compras y conectar a una api de pago.
+
+El objetivo es crear una formulario que permite ingresar datos de productos para ser guardados en un catálogo de productos
 
 Se utilizó npm para instalar e inicializarlo
 
-Demo: https://relaxed-bhaskara-4ed5ad.netlify.app
+Demo: http://localhost:8081 (handlebars),
+      http://localhost:8082 (pug),
+      http://localhost:8083 (ejs)
