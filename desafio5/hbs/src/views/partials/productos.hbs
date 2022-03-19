@@ -2,7 +2,7 @@
 {{#if hayProductos}}
     <table>
         <tr>
-        <th>Titulo</th>
+        <th>Nombre productos</th>
         <th>Precio</th>
         <th>Foto</th>
         </tr>
@@ -10,8 +10,10 @@
         <tr>
             <td>{{this.title}} </td>
             <td>{{this.price}} </td>
-            <td><img src={{this.thumbnail}} style='width:70px;height:70px;'></td>
+            <td><img src={{this.thumbnail}} style='width:70px;height:90px;'></td>
         </tr>
         {{/each}}
     </table>
+    {{else}}
+    <h3>No hay productos</h3>
 {{/if}}
