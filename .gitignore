@@ -1,5 +1,5 @@
 #ignora carpetas node_modules
-node_modules
+**/node_modules
 
 # Ignora archivos dependencia VSC
 .vscode
