@@ -1,0 +1,21 @@
+
+<%- include('./botones.ejs') %> 
+<h1>Ingresa la info del producto</h1>
+<br>
+<form action="/productos" method="post">
+    <label for="title"><b>Nombre producto:</b></label>
+    <input type="text" id="title" name="title">
+    <br>
+    <br>
+    <label for="price"><b>Precio:</b></label>
+    <input type="number" id="price" name="price">
+    <br>
+    <br>
+    <label for="thumbnail"><b>Foto:</b></label>
+    <input type="text" id="thumbnail" name="thumbnail">
+    <br>
+    <br>
+    
+    <button type="submit">Enviar</button>
+    
+</form>
