@@ -1,0 +1,14 @@
+npm init -y : crean package.json
+
+instalación global (no aparecen en el package.json):
+
+npm i -g nodemon
+en el json en scripts escribir "nodemon": "start --inspect ./src/index.js"
+npm start hace andar el nodemon
+si quiero usar node:
+en el json en scripts escribir "node": "node src/index.js"
+npm run node hace andar el nodemon
+
+npm i -g eslint (para verificar errores)
+npx eslint --init (npx hace la descarga local de la librería)
+y corre automáticamente, aparece en sección dev de json
