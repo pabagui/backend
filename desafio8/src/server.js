@@ -5,7 +5,9 @@ const server = http.createServer(app); //así se conecta con express el http
 const { Server } = require("socket.io");
 const fs = require('fs');
 
+const {mysqlOptions} = require('./mysqlOptions')
 const sqlite3Options = require('../ecommerce/SQLite3')
+const {Database} = require('./db')
 
 
 const io = new Server(server);
