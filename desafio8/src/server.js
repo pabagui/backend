@@ -5,6 +5,9 @@ const server = http.createServer(app); //así se conecta con express el http
 const { Server } = require("socket.io");
 const fs = require('fs');
 
+const sqlite3Options = require('../ecommerce/SQLite3')
+
+
 const io = new Server(server);
 
 app.use(express.json());
@@ -16,6 +19,8 @@ app.set('view engine', 'ejs')
 
 const mensajes = [];
 const productos = [];
+
+
 
 
 
